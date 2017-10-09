@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Prove05</string>
+    <string name="edit_book">Book</string>
+    <string name="edit_chapter">Chapter</string>
+    <string name="edit_verse">Verse</string>
+    <string name="button_send">Submit</string>
+    <string name="fav_scripture">Enter your favorite scripture</string>
+    <string name="save_scripture">Save Scripture</string>
+    <string name="load_scripture">Load Scripture</string>
+</resources>
