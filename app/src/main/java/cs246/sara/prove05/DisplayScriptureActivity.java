@@ -19,17 +19,20 @@ public class DisplayScriptureActivity extends AppCompatActivity {
         // Get the Intent that started this activity and extract the string
         Intent intent = getIntent();
         scripture = intent.getStringExtra(MainActivity.EXTRA_MESSAGE);
+        //Record activity in logcat
         Log.d("ScriptureActivity", "Received intent with " + scripture);
         // Capture the layout's TextView and set the string as its text
         TextView textView = (TextView) findViewById(R.id.displayScripture);
         textView.setText(scripture);
     }
 
+    /** Save the scripture to Shared Preferences when user hits Save Scripture button */
     public void saveScripture(View view) {
         SharedPreferences.Editor editor = getSharedPreferences("cs246.sara.prove05", MODE_PRIVATE).edit();
         editor.putString(MainActivity.EXTRA_MESSAGE, scripture);
         editor.apply();
 
+        //Notify user that the scripture was saved
         Toast.makeText(this, "Scripture saved successfully!", Toast.LENGTH_SHORT).show();
     }
 }
